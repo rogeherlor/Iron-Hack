@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script type="text/javascript">
+
+
+
+
+var array = [1,2,3,4,5,6]
+
+var i=0
+var input = function() {
+	console.log(array[i]);
+	i += 1
+	if(i == array.length) {
+		i=0
+	}
+}
+
+
+
+
+//var array = [1,2,3,4,5,6]
+//var arrayy = array +array+array+array
+
+//var i = 0
+//var input = function() {
+	//console.log(arrayy[i]);
+	//i = i+1;
+//}
+
+
+//var hosts= [1.2.3.4.5.6]
+//host = hosts.shift()
+//hosts.push()
+
+
+	</script>
+	</body>
+</html>
