@@ -1,8 +1,9 @@
 class Movies
-	attr_accessor :name, :description
-	def initialize(name, description)
+	attr_accessor :name, :description, :category
+	def initialize(name, description, category)
 		@name = name
 		@description = description
+		@category = category
 	end
 end
 
@@ -25,5 +26,8 @@ class MovieCatalog
 		else
 			@list.sort {|x,y| x.name <=> y.name}.map {|m| m.name}
 		end
+	end
+	def categoryy
+		@list.map { |x| x.category.to_s }.join(', ')
 	end
 end
