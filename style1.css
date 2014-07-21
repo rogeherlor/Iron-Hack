@@ -1,0 +1,121 @@
+body {
+	background-color: #000000;
+	color: #FF0000;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Courier New';
+	margin: 16px;
+	padding: 16px;
+
+}
+
+h2 {
+	background-color: #00FF00;
+	color:#0000FF;
+	text-align: right;
+	padding-right: 16px;
+	transition: all 3s;
+}
+
+h2:hover{
+	background-color: #000000;
+	transition: all 2s;
+	opacity: 0.5;
+}
+
+h2:active {
+	background-color: #FF0000;
+	text-align: left;
+}
+
+p {
+	border: solid 4px #454545;
+	width: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+ul {
+	font-size: 12px;
+	text-align: center;
+	list-style: none;
+	cursor:pointer;
+	background-image: url(http://www.imagenes-juegos.com/halo-4-imagen-i306424-i.jpg);
+	background-size: cover;
+	transition: all 5s;
+}
+
+li:nth-child(even) {
+	background-color: #458639;
+	color: #000000;
+	font-size: 16px;
+	transition: padding 4s;
+}
+
+li:nth-child(odd) {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+li:hover {
+	padding: 100px;
+}
+
+li:first-child {
+	line-height: 32px;
+}
+
+li > span {}
+
+div {
+	width: 128px;
+	height: 128px;
+	background-color: #87ff96;
+	margin: 16px
+}
+
+div.circle {
+	border-radius: 50%;
+}
+div.abstract {
+	border-radius: 10% 20% 30% 40%;
+}
+div:hover{
+	background-color: #0000FF;
+	border-radius: 50%;
+}
+
+.red {
+	background-color: #FFFFFF;
+}
+
+div.triangulo {
+	width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #FFF;
+    box-shadow: 10px 50px #FF0000;
+}
+
+article {
+	position: relative;
+	top: 128px;
+	left: 128px;
+	cursor: crosshair;
+	transition: all 1s cubic-bezier(0.895, 0.030, 0.685, 0.220);
+	width: 256px;
+	height: 256px;
+	font-size: 68px;
+	line-height: 256px;
+	text-align: center;
+	background-color: #ffffff;
+	color: #000000;
+	border-radius: 50%;
+}
+
+article.toRight {
+	opacity: 0.5;
+	-webkit-transform: rotateZ(90deg);
+	left: 512px;
+}
