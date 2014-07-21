@@ -33,11 +33,12 @@ describe  "Movie catalog" do
 			@catalog.add_movie django
 		expect(@catalog.to_s).to eq("killbill, django")
 	end
-	it "filtrar categorias" do
+	it "search categories" do
 		killbill = Movies.new("killbill","The whole bloody affair","japones")
 			@catalog.add_movie killbill
 		django = Movies.new("django","The whole bloody affair","western")
 			@catalog.add_movie django
-		expect(@catalog.categoryy).to eq("japones, western")
+		expect(@catalog.searchcategory("western")).to eq([django])
+		expect(@catalog.searchcategory("japones")).to eq([killbill])
 	end
 end
