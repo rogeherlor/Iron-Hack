@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	<script type="text/javascript">
+
+
+
+if (navigator.geolocation) {
+  console.log("Geolocation are supported!");
+}
+
+var cinema1 = {
+	latitude:40.4073483,
+	longitude:-3.689503
+}
+var cinema2 = {
+	latitude:40.4226679,
+	longitude:-3.7017876
+}
+var cinema3 = {
+	latitude:40.2191021,
+	longitude:-3.6799838
+}
+
+console.log(cinema1)
+console.log(cinema2)
+console.log(cinema3)
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	function onSuccess(position){
+		console.log(position.coords.latitude, position.coords.longitude);
+	}
+	
+	function onError(error){
+		alert("Error en GPS: " + error);
+	}
+
+
+
+
+
+	</script>
+	</body>
+</html>
