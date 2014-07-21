@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+
+			var notification = new Notification("New Email Received", { icon:"http://xitrus.es/imgs/cyberneticos.png"})
+
+
+
+		</script>
+	</body>
+</html>
