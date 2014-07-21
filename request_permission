@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p><button id="request_permission">Set notification permissions for this page</button></p>
+<script>
+document.querySelector("#request_permission").addEventListener("click", function() {
+	alert("fuck yeah!!!");
+Notification.requestPermission(function(){
+	console.log("Hello!");
+	  }, false);
+});
+    </script>
+</body>
+</html> 
