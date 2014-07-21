@@ -27,7 +27,7 @@ class MovieCatalog
 			@list.sort {|x,y| x.name <=> y.name}.map {|m| m.name}
 		end
 	end
-	def categoryy
-		@list.map { |x| x.category.to_s }.join(', ')
+	def searchcategory(category)
+		@list.select { |movie| movie.category == category}
 	end
 end
