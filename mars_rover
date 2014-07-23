@@ -1,0 +1,80 @@
+require 'pry'
+
+class Rover
+	attr_accessor :position
+
+	def initialize
+		@position = [0,0,'S']
+	end
+	def orders(orders)
+
+		orders.split('').each do |orders|
+
+
+		if @position[2]=='S'
+		#cuando estas mirando al Sur
+			orders.split('').each do |orders|
+			if orders == 'f' 
+				@position = [@position[0],@position[1] + 1,'S']
+			elsif orders == 'b'
+				@position = [@position[0],@position[1] - 1,'S']	
+			elsif orders =='l'
+				@position= [@position[0],@position[1],'E']
+			elsif orders =='r'
+				@position= [@position[0],@position[1],'W']
+			end
+			end
+		
+
+		elsif @position[2]=='E'
+		#cuando estas mirando al Este
+			orders.split('').each do |orders|
+			if orders == 'f' 
+				@position = [@position[0] + 1,@position[1],'E']
+			elsif orders == 'b'
+				@position = [@position[0] - 1,@position[1],'E']	
+			elsif orders =='l'
+				@position= [@position[0],@position[1],'N']
+			elsif orders =='r'
+				@position= [@position[0],@position[1],'S']
+			end
+			end
+
+		elsif @position[2]=='N'
+		#cuando estas mirando al Norte
+			orders.split('').each do |orders|
+			if orders == 'f' 
+				@position = [@position[0] ,@position[1] - 1,'N']
+			elsif orders == 'b'
+				@position = [@position[0] ,@position[1] + 1,'N']	
+			elsif orders =='l'
+				@position= [@position[0],@position[1],'W']
+			elsif orders =='r'
+				@position= [@position[0],@position[1],'E']
+			end
+			end
+
+
+		elsif @position[2]=='W'
+		#cuando estas mirando al Oeste
+			orders.split('').each do |orders|
+			if orders == 'f' 
+				@position = [@position[0] - 1 ,@position[1],'W']
+			elsif orders == 'b'
+				@position = [@position[0] - 1,@position[1],'W']	
+			elsif orders =='l'
+				@position= [@position[0],@position[1],'S']
+			elsif orders =='r'
+				@position= [@position[0],@position[1],'N']
+			end
+			end
+
+
+		end
+
+
+		end
+
+	end
+	
+end
