@@ -1,0 +1,48 @@
+require_relative "../mars_rover"
+
+describe  "Mars Rover" do
+
+	before :each do	
+		@rover = Rover.new 
+	end
+
+	it "dont moves" do
+		@rover.orders('')
+		expect(@rover.position).to eq ([0,0,'S'])
+	end
+	it "forward" do
+		@rover.orders('f')
+		expect(@rover.position).to eq ([0,1,'S'])
+	end
+	it 'backward' do
+		@rover.orders('b')
+		expect(@rover.position).to eq ([0,-1,'S'])
+	end
+	it 'forback' do
+		@rover.orders('ffffffffffb')
+		expect(@rover.position).to eq ([0,9,'S'])
+	end
+	it 'right' do
+		@rover.orders('r')
+		expect(@rover.position).to eq ([0,0,'W'])
+	end
+	it 'fortback' do
+		@rover.orders('fffr')
+		expect(@rover.position).to eq ([0, 3,'W'])
+	end
+	it 'fortbackk' do
+		@rover.orders('ffffffl')
+		expect(@rover.position).to eq ([0,6,'E'])
+	end
+	it 'EAST' do
+		@rover.orders('ffflfff')
+		expect(@rover.position).to eq ([3,3,'E'])
+	end
+	it 'definitivo' do
+		@rover.orders('fflfffrfff')
+		expect(@rover.position).to eq ([3,5,'S'])
+	end
+
+
+
+end
