@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="movies_css.css"></link>
+		<title></title>
+	</head>
+	<body bgcolor="#0088FF">
+
+
+	<form action="/">
+
+	<input name="input" placeholder="Word"></input>
+	<button type="submit">Submit</button>
+
+	</form>
+
+
+	<div>
+		<% @movies08.each do |movie| %>
+			<li><img src="<%= movie.poster %>"/></li>
+		<% end%>
+		
+	</div>
